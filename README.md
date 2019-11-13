@@ -1,2 +1,2 @@
 # SSSD-CMS-Site
-Solution Stack Software Development class assignment. Uses PHP, HTML/CSS to create a content management system website
+Solution Stack Software Development class assignment. This is the backend, meaning this is where all the APIs will exist.
