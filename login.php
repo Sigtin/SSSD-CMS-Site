@@ -30,4 +30,5 @@ if(isset($_POST['username']))
     }
 }
     header("Loaction: error_page.php")
+    die();
 ?>
