@@ -1,6 +1,8 @@
 <!-- Login page end point -->
 <?php
 // check if username is in database
+include 'db_config.php';
+
 if(isset($_POST['username']))
 {
     $raw_data = $_POST['username'];
