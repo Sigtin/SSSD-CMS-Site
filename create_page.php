@@ -18,30 +18,27 @@ function html_templent(){}
 
 function build_page($instructions)
 {
-    // instuctions list/ order of needed tages with content [key,value]-> [p1,"This is in my p tage"]
-   $new_page_html = "";
-   $new_page_html = html_templent();
-    foreach ($content as $key => $value) {
-       if(strpos($key,'p')!==false){
+    // create the basic/start of the page
+    // send instuctions as json {"h1":"Cool","p":"Hello Wolrd"}
+    // will build the page in order if h1 is under a p tage in the instructions. The h1 will be shown under the p tage 
+   $new_html_page ="";
+   $json = json_decode($instructions);
+   foreach($json as $content){
+        if($json->h1){
+           $new_p_tage = $new_p_tage." ".create_h1_tage($content);
+        }elseif($json->p){
            create_p_tage($content);
-       }elseif (strpos($key,'div')!==false) {
-           create_div_tage($content);
-       }elseif(strpos($key,'h1')!==false){
-            create_h1_tage($content);
-       }elseif(strpos($key,'h2')!==false){
-            create_h2_tage($content);
-       }elseif(strpos($key,'h3')!==false){
-            create_h3_tage($content);
-       }elseif(strpos($key,'image')!==false){
-            create_image_tage($content);
        }
    }
-   save_page()
+   save_page($new_html_page);
 }
 
-function save_page($new_page_html)
+function save_page($new_html_page)
 {
-    // move to/ call add_page.php
+    // ?move to/ call add_page.php?
+    // save the page($new_html_page as a string) in the database
+    // save the page on the file system/project of the front end 
+    // ?rederect to new page?
 }
 
 ?>
