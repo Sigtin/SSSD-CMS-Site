@@ -1,8 +1,6 @@
 <?php
-include "Add_page.php";
+// MOVE THIS TO THE FRONTEND
 include "html_page_templet.php";
-// based of user input/click add new tages
-
 
 function create_p_tage($content)
 {
@@ -33,8 +31,11 @@ function create_title_tage($content){
     $new_title = "<title>".$content."</titile>";
     return $new_title;
 }
-function html_templent(){
-    return "";
+function open_html(){
+    return "".$doctype."".$html_open."".$head_open."".$meta_data."".$head_close."".$body_open."";
+}
+function close_html(){
+    return "".$body_close."".$html_close."";
 }
 
 function build_page($instructions)
@@ -65,6 +66,7 @@ function build_page($instructions)
             $new_html_page.=create_title_tage($line->title);
         }
    }
+   close_html();
    save_page($new_html_page,$file_name);
 }
 
