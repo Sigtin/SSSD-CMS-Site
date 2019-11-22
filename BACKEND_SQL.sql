@@ -40,6 +40,23 @@ COMMIT;
 
 
 
+--
+-- Table Structure for table `css`
+--
+
+CREATE TABLE `CMS_DB`.`css` ( 
+  `id` INT(3) NOT NULL AUTO_INCREMENT,
+  `file_path` VARCHAR(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`)) ENGINE = MyISAM;
+
+--
+-- Table Structure for table `pages`
+--
+
+CREATE TABLE `cms_db`.`pages` ( 
+  `id` INT(3) NOT NULL AUTO_INCREMENT, 
+  `file_path` VARCHAR(2000) NOT NULL, 
+  PRIMARY KEY (`id`)) ENGINE = MyISAM;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

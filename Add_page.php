@@ -16,7 +16,7 @@ if(isset($_POST['page']))
 
     if($msqli->query($query))
     {
-        header("Location: ")
+        header("Location: ");
         exit();
     }else 
     {
