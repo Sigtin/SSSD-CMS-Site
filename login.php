@@ -27,6 +27,9 @@ if(isset($_POST['username']))
         // un hash password
         if($user->password == $pass)
         {
+            session_start();
+            $_SESSION["username"] = $user->username;
+            $_SESSION["password"] = $user->password;
             header("Location: http://localhost:8080/pages/index.html");
             exit();
         } 
